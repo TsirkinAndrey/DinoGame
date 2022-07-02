@@ -14,7 +14,7 @@ function jump() {
    }
    setTimeout(function (){
        player.classList.remove('jump')
-   }, 1100)
+   }, 1000)
 }
 
 let isAlive = setInterval(function() {
@@ -27,9 +27,11 @@ let isAlive = setInterval(function() {
     if (wallLeft < 50 && wallLeft > 0 && playerTop >= 140) {
         alert('game over your score: ' + score);
         score = 0;
+        location.reload();
     }
-    if (score == 500) {
-        wall.style.animationDuration = "1.5s";
+    if (score == 1500) {
+        wall.style.animationDuration = "1.2s";
 
     }
+
 }, 10)
